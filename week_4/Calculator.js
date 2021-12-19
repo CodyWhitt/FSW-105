@@ -6,21 +6,20 @@ var operator = readLine.question("Please enter the operation to perform: add, su
 
 function calculation(a){
     if (a == "add"){
-        console.log("the result is " + (parseInt(x) + parseInt(y)))
+        console.log("The result is " + (parseInt(x) + parseInt(y)))
     }
     else if (a == 'sub'){
-        console.log("the result is " + (parseInt(x) - parseInt(y)))
+        console.log("The result is " + (parseInt(x) - parseInt(y)))
     }
     else if (a == "mul"){
-        console.log("the result is " + (parseInt(x) * parseInt(y)))
+        console.log("The result is " + (parseInt(x) * parseInt(y)))
     }
     else if (a == "div"){
-        console.log("the result is " + (parseInt(x) / parseInt(y)))
+        console.log("The result is " + (parseInt(x) / parseInt(y)))
     }
     else{
         console.log("error")
     }
-    console.log("The result is " + a)
 }
 
 calculation(operator)
