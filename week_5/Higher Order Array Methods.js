@@ -40,13 +40,13 @@ function ofAge(arr)
 }
 
 console.log("--- Extra Credit for .filter() Method ---");
-console.log(ofAge[
+console.log(ofAge([
     { name: "Angelina Jolie", age: 80 },
     { name: "Eric Jones", age: 2 },
     { name: "Paris Hilton", age: 5 },
     { name: "Kayne West", age: 16 },
     { name: "Bob Ziroll", age: 100 }
-])
+]))
 
 //Output: 
 //[ { name: "Angelina Jolie", age: 80 },
@@ -198,10 +198,13 @@ console.log(stringConcat([1, 2, 3]));   // Output: "123"
 
 //Turn an array of voter objects into a count of how many people voted.  Note: You don't necessarily have to use reduce for this, so try to think of multiple ways you could solve this. 
 
-/*function totalVoters(arr)
-{
-    let result = att.reduce((accumulator, current) => )
-    return result
+function totalVoters(array) {
+    return array.reduce((accumulator, current,) => { 
+        if (current.voted == true){
+            return accumulator += 1
+        } else {
+            return accumulator
+        }}, 0)
 }
 
 var voters = [
@@ -221,12 +224,12 @@ var voters = [
 
 console.log("---  Array Reduce #3 ---")
 console.log( totalVoters(voters) );  // Output: 7*/
+
 //Extra Credit 1: Given an array of all your wish list items, return the total cost of all items. 
 
-/*function shoppingSpree(arr)
-{
-    //your code here
-    
+function shoppingSpree(array) {
+    let result = array.reduce((accumulator, current) => accumulator += current.price, 0);
+    return result
 }
 
 var wishlist = [
@@ -238,13 +241,13 @@ var wishlist = [
 ];
 
 console.log("---  Array Reduce Extra Credit #1 ---");
-console.log( shoppingSpree(wishlist) );  // Output: 227005*/
+console.log( shoppingSpree(wishlist) );  // Output: 227005
 
 //Extra Credit 2: Given an array of arrays, flatten them into a single array.
 
-/*function flatten(arr) {
-    //your code here 
-    
+function flatten(array) {
+    let result = array.reduce((accumulator, current) => accumulator + current);
+    return result
 }
 
 var arrays = [
