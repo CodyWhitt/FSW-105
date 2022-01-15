@@ -44,9 +44,9 @@ function itemSelect(x){
 }}
 
 
-const creatures {
-    [fledgling: "thing", poop: "thing"]
-}
+const creatures [
+    {fledgling: "thing", poop: "thing"}
+]
 
 
 // **GAME START POINT**
