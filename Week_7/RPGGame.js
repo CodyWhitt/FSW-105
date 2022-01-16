@@ -5,7 +5,7 @@ const readline = require("readline-sync")
 // [X] Console must greet player with a fun message
 // [X] Console must ask for the player's name and store it
 // [X] The console will ask the user to enter a "w" to walk
-// [X] Every time the player walks, a random algorithm will be run that determines if a wild enemy has appeared (A 1/3 or 1/4 chance of being attacked)
+// [X] Every time the player walks, a random algorithm will be run that determines if a wild enemy has appeared (A 1/3 or 1/4 chance of being attacked) ** Changed to 50% as game balance is a lot better **
 // If a wild enemy appears:
 // [X] The enemy is random (can be chosen out of a minimum of 3 different enemy names)
 // [X] The user can decide to attack or run
@@ -81,7 +81,7 @@ function deathCheck(x) {
 function battleChance(x) {
   chance = Math.random()
   while (true) {
-    var attacker = creatures[Math.floor(Math.random() * creatures.length)]
+    var attacker = creatures[Math.floor(Math.random() * creatures.length)]-
     exit = 0
     if (chance <= .5 && attacker.hp > 0 && self.hp > 0 && exit === 0) {
       console.log("A " + attacker.name + " appears from the shadows!")
