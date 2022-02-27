@@ -3,9 +3,9 @@ var vegetables = ["carrot", "tomato", "pepper", "lettuce"];
 
 function assigment(){
     vegetables.pop();
-    //console.log("vegetables: ", vegetables);
+    //console.log(vegetables);
     fruit.shift();
-    //console.log("fruit: ", fruit)
+    //console.log(fruit)
     let indexOfOrange = fruit.indexOf("orange");
     //console.log(indexOfOrange)
     fruit.push(indexOfOrange);
@@ -13,7 +13,7 @@ function assigment(){
     let veglength = vegetables.length;
     //console.log(veglength)
     vegetables.push(veglength);
-    //console.log(vegetables)
+    console.log(vegetables)
     let food = fruit.concat(vegetables);
     //console.log(food)
     food.splice(4, 2);
